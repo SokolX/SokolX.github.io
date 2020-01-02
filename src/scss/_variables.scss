@@ -2,6 +2,33 @@
 
 $popins: 'Poppins', sans-serif;
 
+$dektop-width: 1440px;
+
+$thicknessBorderPage: 1rem;
+
 $black: #000;
+$borderBoxColor: #171F3F;
+$greyProjectsBackground: #F5F7FA;
 $yellow: #F9C802;
 $white: #FFF;
+$blueLinkColor: #0593FB;
+
+@mixin borderPage($thick, $color) {
+    border: $thick solid $color;
+    box-sizing: border-box;
+}
+
+
+@mixin dividerSpan($width, $height, $color){
+    display: block;
+    width: $width;
+    height: $height;
+    background-color: $color;
+}
+
+@mixin borderProjectsCard{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+}

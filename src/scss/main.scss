@@ -15,4 +15,85 @@ body {
   background: $white;
   font-size: 16px;
   font-family: $popins;
+  width: $dektop-width;
+
+  @include borderPage($thicknessBorderPage, $borderBoxColor);
+}
+
+
+.footer {
+  background-color: $borderBoxColor;
+  color: $white;
+  padding: 8rem;
+
+  &__description {
+    font-size: 1.2rem;
+  }
+
+  &__divider span{
+    @include dividerSpan(5rem, .4rem, $blueLinkColor)
+  }
+
+  &__item {
+    display: inline;
+    font-size: 2rem;
+    margin-right: 24px;
+
+    &--white {
+      color: $white;
+    }
+  }
+
+  &__link {
+    color: $blueLinkColor;
+    line-break: 24px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__mail {
+    color: $blueLinkColor;
+    text-decoration: none;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__underline {
+    border-bottom: 2px solid $blueLinkColor;
+  }
+}
+
+.projects {
+  padding: 8rem;
+  background-color: $greyProjectsBackground;
+
+  &__about {
+    padding: 3rem;
+
+  }
+
+  &__footer {
+    background-color: $greyProjectsBackground;
+    padding: 1rem 3rem;
+  }
+
+  &__item {
+    background-color: $white;
+    @include borderProjectsCard;
+    margin: 1.4rem 0 1.4rem 0;
+    border-radius: .5rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+
 }

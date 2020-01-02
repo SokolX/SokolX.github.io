@@ -17,7 +17,7 @@ if ('serviceWorker' in navigator) {
 // place your code below
 const list = document.querySelector('.projects__list--js'); 
 
-fetch("https://api.github.com/users/sokolx/repos")
+fetch("https://api.github.com/users/sokolx/repos?+sort:updated-date-asc")
 .then(resp => resp.json())
 .then(resp => {
 
@@ -25,19 +25,25 @@ fetch("https://api.github.com/users/sokolx/repos")
 
   for (const repo of repos) {
     console.log(repos)
-    const {name, html_url, homepage, description} = repo;
+    const {name, html_url, homepage, description, language} = repo;
 
-    list.innerHTML += `<li class="list__item">
-                        <span style="font-size: 3rem;">
-                          <i class="fa fa-github"></i>
-                        </span>
-                        <h4 class="item__title">${name}</h4>
-                        <p class="item__description">${description}</p>
-                        <footer class="item__footer">
-                          <a href=${homepage}>Demo</a>
-                          <a href=${html_url}>Github</a>
-                        </footer>
-                      </li>`
+    if (language == 'CSS' || language == 'HTML' || language == 'JavaScript' ) {
+      list.innerHTML += `<li class="projects__item">
+      <section class="projects__about">
+        <span style="font-size: 3rem;">
+          <i class="fa fa-github"></i>
+        </span>
+        <h4 class="item__title">${name}</h4>
+        <p class="item__description">${description}</p>
+      </section>
+      <footer class="projects__footer">
+        <a href=${homepage}>Demo</a>
+        <a href=${html_url}>Github</a>
+      </footer>
+
+    </li>`
+    }
+    
   }
   
 })
