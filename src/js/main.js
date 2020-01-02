@@ -15,8 +15,32 @@ if ('serviceWorker' in navigator) {
 }
 
 // place your code below
+const list = document.querySelector('.projects__list--js'); 
 
+fetch("https://api.github.com/users/sokolx/repos")
+.then(resp => resp.json())
+.then(resp => {
 
-console.log(`Hello world!`);
+  const repos = resp;
 
+  for (const repo of repos) {
+    console.log(repos)
+    const {name, html_url, homepage, description} = repo;
 
+    list.innerHTML += `<li class="list__item">
+                        <span style="font-size: 3rem;">
+                          <i class="fa fa-github"></i>
+                        </span>
+                        <h4 class="item__title">${name}</h4>
+                        <p class="item__description">${description}</p>
+                        <footer class="item__footer">
+                          <a href=${homepage}>Demo</a>
+                          <a href=${html_url}>Github</a>
+                        </footer>
+                      </li>`
+  }
+  
+})
+.catch(e => {
+  console.log(e);
+})
