@@ -1,12 +1,13 @@
 @import "_normalize";
 @import "_variables";
 
-
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -21,10 +22,10 @@ body {
 }
 
 .author {
-  padding: 8rem;
+  padding: 8rem 8rem 4.5rem 8rem;
   width: 70%;
 
-  &__description { 
+  &__description {
     font-size: 1.2rem;
   }
 
@@ -43,7 +44,6 @@ body {
     &--padding {
       padding-top: 3.5rem;
     }
-    
   }
 
   &__mail {
@@ -80,8 +80,8 @@ body {
     font-size: 1.2rem;
   }
 
-  &__divider span{
-    @include dividerSpan(5rem, .4rem, $blueLinkColor)
+  &__divider span {
+    @include dividerSpan(5rem, 0.4rem, $blueLinkColor);
   }
 
   &__item {
@@ -119,17 +119,12 @@ body {
   }
 }
 
-.main {
-  padding: 8rem; 
-}
-
 .projects {
   padding: 8rem;
   background-color: $greyProjectsBackground;
 
   &__about {
     padding: 3rem;
-
   }
 
   &__footer {
@@ -141,7 +136,7 @@ body {
     background-color: $white;
     @include borderProjectsCard;
     margin: 1.4rem 0 1.4rem 0;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     width: 48%;
   }
 
@@ -154,38 +149,49 @@ body {
   }
 }
 
-
-
 .skills {
-  padding: 4rem 0;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  padding: 8rem;
 
-  &__divider {
-    &--green{
-      @include dividerSpan(5rem, .4rem, $green)
+  &-content {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    &__divider {
+      &--green {
+        @include dividerSpan(5rem, 0.4rem, $green);
+      }
+
+      &--blue {
+        @include dividerSpan(5rem, 0.4rem, $blue);
+      }
+      &--violet {
+        @include dividerSpan(5rem, 0.4rem, $violet);
+      }
     }
-    &--blue{
-      @include dividerSpan(5rem, .4rem, $blue)
+
+    &__item {
+      width: 50%;
     }
-    &--violet{
-      @include dividerSpan(5rem, .4rem, $violet)
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    &__title {
+      white-space: nowrap;
     }
   }
 
-  &__header {
-    width: 100%;
-  }
+  &-header {
+    padding: 4rem 0;
 
-  &__item {
-    width: 50%;
-  }
-
-  &__list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    &__divider--grey {
+      @include dividerSpan(100%, 0.1rem, $grey);
+    }
   }
 }
