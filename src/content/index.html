@@ -35,17 +35,24 @@
   </head>
   <body>
 
-    <header class="site-header">
-      <img class="site-header__image" src="/assets/img/lukaszs.png" alt="Zdjęcie przedstawia Łukasza Sokołka." />
-      <h1 class="site-header__description">Hej! 🤝 Jestem Łukasz i aspiruje do pracy jako frontend developer. </h1>
-      <p>Za pewne interesują Cię moje <a href="#skills">umiejętności</a>, które mają potwierdzenie 
+    <section class="author">
+      <div class="author__photo">
+        <img class="author__image" src="/assets/img/lukaszs.png" alt="Zdjęcie przedstawia Łukasza Sokołka." />
+      </div>
+      
+      <h1 class="author__welcome">Hej! 🤝 Jestem Łukasz i aspiruje do pracy jako frontend developer. </h1>
+      <p class="author__description">Za pewne interesują Cię moje <a class="author__link" href="#skills">umiejętności</a>, które mają potwierdzenie 
         w projektach. Aktualnie poszukuję nowych wyzwań, jeżeli masz je dla 
-        mnie - <a href="#contact">kontakt do mnie</a> 😃
+        mnie - <a class="author__link" href="#contact">kontakt do mnie</a> 😃
       </p>
-      <a href="mailto:89soek@gmail.com">89soek@gmail.com</a>
-    </header>
+      <p class="author__link author__link--padding">
+        <a class="author__mail" href="mailto:89soek@gmail.com">
+          <span class="author__underline">89soek@gmail.com</span>
+        </a>
+      </p>
+    </section>
 
-    <main class="main">
+    <section class="main">
 
       <header class="header" id="skills">
         <h1 class="header__title">
@@ -54,7 +61,13 @@
       </header>
 
       <section class="skills" id="skills">
-        <h2 class="skills__header">Working knowledge</h2>
+        <div class="skills__divider skills__divider--green">
+          <span></span>
+          <span></span>
+          <span></span>
+          <h2 class="skills__header">Working knowledge</h2>
+        </div>
+        
         <ul class="skills__list">
           <li class="skills__item">✅ Semantic HTML5</li>
           <li class="skills__item">✅ Flexbox</li>
@@ -68,7 +81,13 @@
       </section>
 
       <section class="skills">
-        <h2 class="skills__header">Know something about</h2>
+        <div class="skills__divider skills__divider--violet">
+          <span></span>
+          <span></span>
+          <span></span>
+          <h2 class="skills__header">Know something about</h2>
+        </div>
+
         <ul class="skills__list">
           <li class="skills__item">✅ JavaScript ES6</li>
           <li class="skills__item">✅ Progressive web apps</li>
@@ -81,7 +100,13 @@
       </section>
 
       <section class="skills">
-        <h2 class="skills__header">Want to learn</h2>
+        <div class="skills__divider skills__divider--blue">
+          <span></span>
+          <span></span>
+          <span></span>
+          <h2 class="skills__header">Want to learn</h2>
+        </div>
+        
         <ul class="skills__list">
           <li class="skills__item">✅ React JS</li>
           <li class="skills__item">✅ Node.JS</li>
@@ -93,13 +118,12 @@
         </ul>
       </section>
 
-    </main>
+    </section>
 
     <section class="projects">
       <h2 class="projects__title">Projekty</h2>
       <p class="projects__description">
-        Swoje pierwszym większy projekt zrealizowałem w trakcie robienia projektu inżynierskiego w 2017 roku. 
-        W 2018 roku zapisałem się na kurs: "WTF: Co ten Frontend" czego efektem jest kilka projektów dostępnych poniżej. 
+        
       </p>
       <ul class="projects__list projects__list--js">
 

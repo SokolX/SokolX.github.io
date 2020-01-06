@@ -15,11 +15,61 @@ body {
   background: $white;
   font-size: 16px;
   font-family: $popins;
-  width: $dektop-width;
+  //width: $dektop-width;
 
   @include borderPage($thicknessBorderPage, $borderBoxColor);
 }
 
+.author {
+  padding: 8rem;
+  width: 70%;
+
+  &__description { 
+    font-size: 1.2rem;
+  }
+
+  &__image {
+    position: absolute;
+    width: 7.1rem;
+    height: 7.1rem;
+    border-radius: 50%;
+  }
+
+  &__link {
+    color: $blueLinkColor;
+    line-break: 24px;
+    font-size: 1.2rem;
+
+    &--padding {
+      padding-top: 3.5rem;
+    }
+    
+  }
+
+  &__mail {
+    color: $blueLinkColor;
+    text-decoration: none;
+    margin-bottom: 0;
+  }
+
+  &__photo {
+    width: 8rem;
+    height: 8rem;
+    border: 4px solid $grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__underline {
+    border-bottom: 2px solid $blueLinkColor;
+  }
+
+  &__welcome {
+    font-size: 2.5rem;
+  }
+}
 
 .footer {
   background-color: $borderBoxColor;
@@ -69,6 +119,10 @@ body {
   }
 }
 
+.main {
+  padding: 8rem; 
+}
+
 .projects {
   padding: 8rem;
   background-color: $greyProjectsBackground;
@@ -88,12 +142,50 @@ body {
     @include borderProjectsCard;
     margin: 1.4rem 0 1.4rem 0;
     border-radius: .5rem;
+    width: 48%;
   }
 
   &__list {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+
+
+.skills {
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+
+  &__divider {
+    &--green{
+      @include dividerSpan(5rem, .4rem, $green)
+    }
+    &--blue{
+      @include dividerSpan(5rem, .4rem, $blue)
+    }
+    &--violet{
+      @include dividerSpan(5rem, .4rem, $violet)
+    }
   }
 
+  &__header {
+    width: 100%;
+  }
 
+  &__item {
+    width: 50%;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 }

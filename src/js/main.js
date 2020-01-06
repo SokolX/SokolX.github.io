@@ -28,6 +28,7 @@ fetch("https://api.github.com/users/sokolx/repos?+sort:updated-date-asc")
     const {name, html_url, homepage, description, language} = repo;
 
     if (language == 'CSS' || language == 'HTML' || language == 'JavaScript' ) {
+
       list.innerHTML += `<li class="projects__item">
       <section class="projects__about">
         <span style="font-size: 3rem;">
