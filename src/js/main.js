@@ -35,7 +35,7 @@ fetch("https://api.github.com/users/sokolx/repos?+sort:updated-date-asc")
           <i class="fa fa-github"></i>
         </span>
         <h4 class="item__title">${name}</h4>
-        <p class="item__description">${description}</p>
+        <p class="item__description">${description ? description : "Brak opisu projektu. " }</p>
       </section>
       <footer class="projects__footer">
         <a href=${homepage}>Demo</a>

@@ -172,6 +172,7 @@ body {
 
     &__item {
       width: 50%;
+      font-size: 1.2rem;
     }
 
     &__list {
@@ -183,6 +184,7 @@ body {
     }
 
     &__title {
+      font-size: 2rem;
       white-space: nowrap;
     }
   }
@@ -192,6 +194,10 @@ body {
 
     &__divider--grey {
       @include dividerSpan(100%, 0.1rem, $grey);
+    }
+
+    &__title {
+      font-size: 2.2rem;
     }
   }
 }
