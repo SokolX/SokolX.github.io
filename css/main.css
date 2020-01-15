@@ -452,7 +452,8 @@ body {
       height: 0.4rem;
       background-color: #653CAD; }
     .skills-content__item {
-      width: 50%; }
+      width: 50%;
+      font-size: 1.2rem; }
     .skills-content__list {
       list-style: none;
       padding: 0;
@@ -467,6 +468,7 @@ body {
           -ms-flex-pack: justify;
               justify-content: space-between; }
     .skills-content__title {
+      font-size: 2rem;
       white-space: nowrap; }
   .skills-header {
     padding: 4rem 0; }
@@ -475,5 +477,7 @@ body {
       width: 100%;
       height: 0.1rem;
       background-color: #CBD2D9; }
+    .skills-header__title {
+      font-size: 2.2rem; }
 
 /*# sourceMappingURL=main.css.map */
