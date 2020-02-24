@@ -371,7 +371,9 @@ body {
   color: #FFF;
   padding: 8rem; }
   .footer__description {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+    width: 40%; }
   .footer__divider span {
     display: block;
     width: 5rem;
@@ -398,22 +400,63 @@ body {
   .footer__underline {
     border-bottom: 2px solid #0593FB; }
 
+.links__separator {
+  margin: 24dp; }
+
 .projects {
   padding: 8rem;
   background-color: #F5F7FA; }
   .projects__about {
     padding: 3rem; }
+  .projects__description {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: #52606D; }
+  .projects__divider {
+    border-left: 1px solid #CBD2D9;
+    border-right: 1px solid #CBD2D9;
+    height: 2rem; }
   .projects__footer {
     background-color: #F5F7FA;
-    padding: 1rem 3rem; }
+    padding: 1rem 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .projects__image {
+    margin: 0 0.4rem 0 0; }
   .projects__item {
     background-color: #FFF;
     position: relative;
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     margin: 1.4rem 0 1.4rem 0;
-    border-radius: 0.5rem;
-    width: 48%; }
+    border-radius: 0.5rem 0.5rem 0 0;
+    width: 48%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .projects__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #0593FB;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .projects__links--center {
+      padding: 0rem 1.2rem; }
   .projects__list {
     list-style: none;
     padding: 0;
@@ -427,6 +470,10 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+  .projects__title {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-style: normal; }
 
 .skills {
   padding: 8rem; }
