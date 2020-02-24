@@ -8,6 +8,7 @@ $thicknessBorderPage: 1rem;
 
 $black: #000;
 $borderBoxColor: #171F3F;
+$darkGrey: #52606D;
 $greyProjectsBackground: #F5F7FA;
 $grey: #CBD2D9;
 $yellow: #F9C802;
@@ -35,4 +36,10 @@ $blue: #2251CC;
     -webkit-box-shadow:0 4px 4px rgba(0, 0, 0, 0.25);
        -moz-box-shadow:0 4px 4px rgba(0, 0, 0, 0.25);
             box-shadow:0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin dividerVertical($height, $color) {
+     border-left:1px solid $color; 
+     border-right:1px solid $color; 
+     height: $height;
 }

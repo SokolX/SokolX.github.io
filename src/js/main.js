@@ -34,12 +34,25 @@ fetch("https://api.github.com/users/sokolx/repos?+sort:updated-date-asc")
         <span style="font-size: 3rem;">
           <i class="fa fa-github"></i>
         </span>
-        <h4 class="item__title">${name}</h4>
-        <p class="item__description">${description ? description : "Brak opisu projektu. " }</p>
+        <h4 class="projects__title">${name}</h4>
+        <p class="projects__description">${description ? description : "Brak opisu projektu. " }</p>
       </section>
+
       <footer class="projects__footer">
-        <a href=${homepage}>Demo</a>
-        <a href=${html_url}>Github</a>
+
+
+          <a class="projects__links" href=${homepage}>
+            <img class="projects__image" src="/assets/img/img-demo.svg">Demo
+          </a>
+          <a class="projects__links projects__links--center">
+            <div class="projects__divider"></div>
+          </a>
+          <a class="projects__links" href=${html_url}>
+            <img class="projects__image" src="/assets/img/img-git.svg">Github
+          </a>
+
+        
+
       </footer>
 
     </li>`

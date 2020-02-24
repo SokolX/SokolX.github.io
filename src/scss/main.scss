@@ -78,6 +78,8 @@ body {
 
   &__description {
     font-size: 1.2rem;
+    line-height: 2.1rem;
+    width: 40%;
   }
 
   &__divider span {
@@ -118,7 +120,9 @@ body {
     border-bottom: 2px solid $blueLinkColor;
   }
 }
-
+.links__separator {
+  margin: 24dp;
+}
 .projects {
   padding: 8rem;
   background-color: $greyProjectsBackground;
@@ -127,17 +131,48 @@ body {
     padding: 3rem;
   }
 
+  &__description {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: $darkGrey;
+  }
+  
+  &__divider {
+    @include dividerVertical(2rem, $grey);
+  }
+
   &__footer {
     background-color: $greyProjectsBackground;
     padding: 1rem 3rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__image {
+    margin: 0 0.4rem 0 0;
   }
 
   &__item {
     background-color: $white;
     @include borderProjectsCard;
     margin: 1.4rem 0 1.4rem 0;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
     width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__links {
+    display: flex;
+    color: $blueLinkColor;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+    &--center {
+      padding: 0rem 1.2rem;
+    }
   }
 
   &__list {
@@ -146,6 +181,12 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-style: normal;
   }
 }
 
