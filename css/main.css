@@ -444,7 +444,7 @@ body {
             flex-direction: column;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end; }
+            justify-content: end; }
   .projects__links {
     display: -webkit-box;
     display: -ms-flexbox;
