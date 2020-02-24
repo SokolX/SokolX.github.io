@@ -40,7 +40,6 @@ fetch("https://api.github.com/users/sokolx/repos?+sort:updated-date-asc")
 
       <footer class="projects__footer">
 
-
           <a class="projects__links" href=${homepage}>
             <img class="projects__image" src="/assets/img/img-demo.svg">Demo
           </a>
@@ -50,9 +49,7 @@ fetch("https://api.github.com/users/sokolx/repos?+sort:updated-date-asc")
           <a class="projects__links" href=${html_url}>
             <img class="projects__image" src="/assets/img/img-git.svg">Github
           </a>
-
-        
-
+          
       </footer>
 
     </li>`
