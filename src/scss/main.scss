@@ -135,6 +135,7 @@ body {
     font-size: 1.1rem;
     line-height: 2rem;
     color: $darkGrey;
+    padding: 1rem 0 4rem 0;
   }
   
   &__divider {
@@ -160,7 +161,7 @@ body {
     width: 48%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: space-between;
   }
 
   &__links {
@@ -207,7 +208,7 @@ body {
   &-content {
     padding: 4rem 0;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr;
 
     &__divider {
       &--green {
@@ -225,6 +226,7 @@ body {
     &__item {
       width: 50%;
       font-size: 1.2rem;
+
     }
 
     &__list {
@@ -232,7 +234,6 @@ body {
       padding: 0;
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-between;
     }
 
     &__title {
