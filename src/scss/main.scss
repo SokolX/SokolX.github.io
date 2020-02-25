@@ -16,17 +16,34 @@ body {
   background: $white;
   font-size: 16px;
   font-family: $popins;
-  //width: $dektop-width;
-
   @include borderPage($thicknessBorderPage, $borderBoxColor);
+
+  @media (max-width: $telephone) {
+    @include borderPage(0, $borderBoxColor);
+  }
+
+  
+
 }
 
 .author {
   padding: 8rem 8rem 4.5rem 8rem;
   width: 70%;
 
+  @media (max-width: $telephone) {
+    padding: 4rem 1rem;
+    width: 100%;
+  }
+
   &__description {
     font-size: 1.2rem;
+
+    @media (max-width: $telephone) {
+      font-size: 0.9rem;
+      line-height: 1.625rem;
+      font-weight: 300;
+    }
+
   }
 
   &__image {
@@ -43,6 +60,15 @@ body {
 
     &--padding {
       padding-top: 3.5rem;
+      @media (max-width: $telephone) {
+        padding-top: 2.5rem;
+      }
+    }
+
+    @media (max-width: $telephone) {
+      font-size: 0.9rem;
+      line-height: 1.625rem;
+      font-weight: 300;
     }
   }
 
@@ -50,6 +76,7 @@ body {
     color: $blueLinkColor;
     text-decoration: none;
     margin-bottom: 0;
+    
   }
 
   &__photo {
@@ -60,14 +87,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
 
   &__underline {
     border-bottom: 2px solid $blueLinkColor;
+    
   }
 
   &__welcome {
     font-size: 2.5rem;
+
+    @media (max-width: $telephone) {
+      font-size: 1.6rem;
+      line-height: 2.25rem;
+    }
   }
 }
 
@@ -76,14 +110,29 @@ body {
   color: $white;
   padding: 8rem;
 
+  @media (max-width: $telephone) {
+    padding: 8rem 1rem;
+    width: 100%;
+  }
+
   &__description {
     font-size: 1.2rem;
     line-height: 2.1rem;
     width: 40%;
+
+    @media (max-width: $telephone) {
+      width: 80%;
+      font-size: 0.9rem;
+      line-height: 1.6rem;
+    }
   }
 
   &__divider span {
     @include dividerSpan(5rem, 0.4rem, $blueLinkColor);
+    @media (max-width: $telephone) {
+      @include dividerSpan(3.5rem, 0.2rem, $blueLinkColor);
+    }
+
   }
 
   &__item {
@@ -93,6 +142,11 @@ body {
 
     &--white {
       color: $white;
+    }
+
+    @media (max-width: $telephone) {
+      font-size: 2rem;
+      margin-right: 1.5rem;
     }
   }
 
@@ -110,22 +164,35 @@ body {
     color: $blueLinkColor;
     text-decoration: none;
     margin-bottom: 0;
+    @media (max-width: $telephone) {
+      font-size: 0.9rem;
+    }
   }
 
   &__title {
     font-size: 2rem;
+    @media (max-width: $telephone) {
+      font-size: 1.2rem;
+    }
   }
 
   &__underline {
     border-bottom: 2px solid $blueLinkColor;
   }
 }
+
 .links__separator {
   margin: 24dp;
 }
+
 .projects {
   padding: 8rem;
   background-color: $greyProjectsBackground;
+
+  @media (max-width: $telephone) {
+    padding: 1rem;
+    width: 100%;
+  }
 
   &__about {
     padding: 3rem;
@@ -205,27 +272,56 @@ body {
 .skills {
   padding: 8rem;
 
+  @media (max-width: $telephone) {
+    padding: 1rem;
+    width: 100%;
+  }
+
   &-content {
     padding: 4rem 0;
     display: grid;
     grid-template-columns: 2fr 2fr;
 
+    @media (max-width: $telephone) {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "title"
+      "items";
+    }
+
     &__divider {
       &--green {
         @include dividerSpan(5rem, 0.4rem, $green);
+        @media (max-width: $telephone) {
+          @include dividerSpan(3.5rem, 0.2rem, $green);
+        }
       }
 
       &--blue {
         @include dividerSpan(5rem, 0.4rem, $blue);
+
+        @media (max-width: $telephone) {
+          @include dividerSpan(3.5rem, 0.2rem, $blue);
+        }
       }
       &--violet {
         @include dividerSpan(5rem, 0.4rem, $violet);
+        @media (max-width: $telephone) {
+          @include dividerSpan(3.5rem, 0.2rem, $violet);
+        }
+
       }
     }
 
     &__item {
       width: 50%;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+
+      @media (max-width: $telephone) {
+        width: 100%;
+        font-size: 0.9rem;
+      }
 
     }
 
@@ -234,11 +330,21 @@ body {
       padding: 0;
       display: flex;
       flex-flow: row wrap;
+
+      @media (max-width: $telephone) {
+        width: 100%;
+        font-size: 0.9rem;
+  
+      }
     }
 
     &__title {
       font-size: 2rem;
       white-space: nowrap;
+
+      @media (max-width: $telephone) {
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -251,6 +357,14 @@ body {
 
     &__title {
       font-size: 2.2rem;
+
+      @media (max-width: $telephone) {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2rem;
+        text-align: center;
+      }
     }
+    
   }
 }
