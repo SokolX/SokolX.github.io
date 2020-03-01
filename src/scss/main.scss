@@ -323,16 +323,23 @@ body {
       padding: 1rem;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-areas: "title"
-      "items";
+
     }
 
     &__divider {
+
+      @media (max-width: $telephone) {
+        margin-bottom: 2.5rem;
+      }
+
       &--green {
         @include dividerSpan(5rem, 0.4rem, $green);
+
         @media (max-width: $telephone) {
           @include dividerSpan(3.5rem, 0.2rem, $green);
+          
         }
+
       }
 
       &--blue {
@@ -342,13 +349,14 @@ body {
           @include dividerSpan(3.5rem, 0.2rem, $blue);
         }
       }
+
       &--violet {
         @include dividerSpan(5rem, 0.4rem, $violet);
         @media (max-width: $telephone) {
           @include dividerSpan(3.5rem, 0.2rem, $violet);
         }
-
       }
+
     }
 
     &__item {
@@ -369,10 +377,10 @@ body {
       flex-flow: row wrap;
 
       @media (max-width: $telephone) {
-        width: 100%;
         font-size: 0.9rem;
-  
+        line-height: 2.2rem;  
       }
+      
     }
 
     &__title {
