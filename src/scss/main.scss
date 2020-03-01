@@ -196,6 +196,9 @@ body {
 
   &__about {
     padding: 3rem;
+    @media (max-width: $telephone) {
+      padding: 2rem;
+    }
   }
 
   &__description {
@@ -220,6 +223,19 @@ body {
     margin: 0 0.4rem 0 0;
   }
 
+  &__info {
+      font-size: 1.3rem;
+      line-height: 2.1rem;
+      font-weight: 300;
+      color: $darkGrey;
+
+      @media (max-width: $telephone) {
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+        text-align: center;
+      }
+  }
+
   &__item {
     background-color: $white;
     @include borderProjectsCard;
@@ -229,6 +245,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: $telephone) {
+      width: 100%;
+    }
   }
 
   &__links {
@@ -248,6 +268,7 @@ body {
       text-decoration: line-through;
       pointer-events: none;
     }
+    
   }
 
   &__list {
@@ -256,16 +277,32 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+
+    @media (max-width: $telephone) {
+      display: flex;
+      flex-flow: column;
+      }
   }
 
   &__title {
     font-size: 2.2rem;
+
+    @media (max-width: $telephone) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      text-align: center;
+    }
   }
   
   &__name {
     font-size: 1.2rem;
     line-height: 2.2rem;
     font-style: normal;
+
+    @media (max-width: $telephone) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
   }
 }
 
