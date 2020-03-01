@@ -590,8 +590,10 @@ body {
         display: -ms-grid;
         display: grid;
         -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-            grid-template-areas: "title" "items"; } }
+        grid-template-columns: 1fr; } }
+    @media (max-width: 640px) {
+      .skills-content__divider {
+        margin-bottom: 2.5rem; } }
     .skills-content__divider--green {
       display: block;
       width: 5rem;
@@ -644,8 +646,8 @@ body {
               flex-flow: row wrap; }
       @media (max-width: 640px) {
         .skills-content__list {
-          width: 100%;
-          font-size: 0.9rem; } }
+          font-size: 0.9rem;
+          line-height: 2.2rem; } }
     .skills-content__title {
       font-size: 2rem;
       white-space: nowrap; }
