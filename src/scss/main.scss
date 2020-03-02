@@ -42,6 +42,7 @@ body {
       font-size: 0.9rem;
       line-height: 1.625rem;
       font-weight: 300;
+      
     }
 
   }
@@ -51,6 +52,11 @@ body {
     width: 7.1rem;
     height: 7.1rem;
     border-radius: 50%;
+
+    @media (max-width: $telephone) {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
   }
 
   &__link {
@@ -87,6 +93,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: $telephone) {
+      width: 5rem;
+      height: 5rem;
+      border: 3px solid $grey;
+    }
 
   }
 
