@@ -337,15 +337,16 @@ body {
   width: 70%; }
   @media (max-width: 640px) {
     .author {
-      padding: 4rem 1rem;
+      padding: 4rem 1rem 0 1rem;
       width: 100%; } }
   .author__description {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-weight: 300; }
     @media (max-width: 640px) {
       .author__description {
         font-size: 0.9rem;
-        line-height: 1.625rem;
-        font-weight: 300; } }
+        line-height: 1.625rem; } }
   .author__image {
     position: absolute;
     width: 7.1rem;
@@ -359,20 +360,27 @@ body {
     color: #0593FB;
     line-break: 24px;
     font-size: 1.2rem; }
-    .author__link--padding {
-      padding-top: 3.5rem; }
-      @media (max-width: 640px) {
-        .author__link--padding {
-          padding-top: 2.5rem; } }
     @media (max-width: 640px) {
       .author__link {
         font-size: 0.9rem;
         line-height: 1.625rem;
         font-weight: 300; } }
+    .author__link--padding {
+      padding-top: 3.5rem; }
+      @media (max-width: 640px) {
+        .author__link--padding {
+          padding-top: 2.5rem; } }
   .author__mail {
     color: #0593FB;
     text-decoration: none;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2rem; }
+    @media (max-width: 640px) {
+      .author__mail {
+        font-size: 0.9rem;
+        line-height: 1.5rem; } }
   .author__photo {
     width: 8rem;
     height: 8rem;
@@ -395,7 +403,8 @@ body {
   .author__underline {
     border-bottom: 2px solid #0593FB; }
   .author__welcome {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    line-height: 3.5rem; }
     @media (max-width: 640px) {
       .author__welcome {
         font-size: 1.6rem;
@@ -468,7 +477,7 @@ body {
   background-color: #F5F7FA; }
   @media (max-width: 640px) {
     .projects {
-      padding: 1rem;
+      padding: 4rem 1rem;
       width: 100%; } }
   .projects__about {
     padding: 3rem; }
@@ -478,8 +487,13 @@ body {
   .projects__description {
     font-size: 1.1rem;
     line-height: 2rem;
-    color: #52606D;
-    padding: 1rem 0 4rem 0; }
+    padding: 1rem 0 4rem 0;
+    color: #52606D; }
+    @media (max-width: 640px) {
+      .projects__description {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 0; } }
   .projects__divider {
     border-left: 1px solid #CBD2D9;
     border-right: 1px solid #CBD2D9;
@@ -492,7 +506,11 @@ body {
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end; }
+            justify-content: flex-end;
+    border-radius: 0 0 0.5rem 0.5rem; }
+    @media (max-width: 640px) {
+      .projects__footer {
+        padding: 0.6rem 2rem; } }
   .projects__image {
     margin: 0 0.4rem 0 0; }
   .projects__info {
@@ -511,7 +529,7 @@ body {
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     margin: 1.4rem 0 1.4rem 0;
-    border-radius: 0.5rem 0.5rem 0 0;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
     width: 48%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -585,7 +603,7 @@ body {
   padding: 8rem; }
   @media (max-width: 640px) {
     .skills {
-      padding: 1rem;
+      padding: 4rem 1rem;
       width: 100%; } }
   .skills-content {
     padding: 4rem 0;
