@@ -351,6 +351,10 @@ body {
     width: 7.1rem;
     height: 7.1rem;
     border-radius: 50%; }
+    @media (max-width: 640px) {
+      .author__image {
+        width: 4.2rem;
+        height: 4.2rem; } }
   .author__link {
     color: #0593FB;
     line-break: 24px;
@@ -383,6 +387,11 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media (max-width: 640px) {
+      .author__photo {
+        width: 5rem;
+        height: 5rem;
+        border: 3px solid #CBD2D9; } }
   .author__underline {
     border-bottom: 2px solid #0593FB; }
   .author__welcome {
