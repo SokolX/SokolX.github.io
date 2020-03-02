@@ -22,8 +22,6 @@ body {
     @include borderPage(0, $borderBoxColor);
   }
 
-  
-
 }
 
 .author {
@@ -31,18 +29,18 @@ body {
   width: 70%;
 
   @media (max-width: $telephone) {
-    padding: 4rem 1rem;
+    padding: 4rem 1rem 0 1rem;
     width: 100%;
   }
 
   &__description {
     font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-weight: 300;
 
     @media (max-width: $telephone) {
       font-size: 0.9rem;
       line-height: 1.625rem;
-      font-weight: 300;
-      
     }
 
   }
@@ -57,6 +55,7 @@ body {
       width: 4.2rem;
       height: 4.2rem;
     }
+    
   }
 
   &__link {
@@ -64,25 +63,35 @@ body {
     line-break: 24px;
     font-size: 1.2rem;
 
-    &--padding {
-      padding-top: 3.5rem;
-      @media (max-width: $telephone) {
-        padding-top: 2.5rem;
-      }
-    }
-
     @media (max-width: $telephone) {
       font-size: 0.9rem;
       line-height: 1.625rem;
       font-weight: 300;
     }
+
+    &--padding {
+      padding-top: 3.5rem;
+
+      @media (max-width: $telephone) {
+        padding-top: 2.5rem;
+      }
+    }
+
   }
 
   &__mail {
     color: $blueLinkColor;
     text-decoration: none;
     margin-bottom: 0;
-    
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2rem;
+
+    @media (max-width: $telephone) {
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
+
   }
 
   &__photo {
@@ -109,6 +118,7 @@ body {
 
   &__welcome {
     font-size: 2.5rem;
+    line-height: 3.5rem;
 
     @media (max-width: $telephone) {
       font-size: 1.6rem;
@@ -202,22 +212,31 @@ body {
   background-color: $greyProjectsBackground;
 
   @media (max-width: $telephone) {
-    padding: 1rem;
+    padding: 4rem 1rem;
     width: 100%;
   }
 
   &__about {
     padding: 3rem;
+
     @media (max-width: $telephone) {
       padding: 2rem;
     }
+
   }
 
   &__description {
     font-size: 1.1rem;
     line-height: 2rem;
-    color: $darkGrey;
     padding: 1rem 0 4rem 0;
+    color: $darkGrey;
+
+    @media (max-width: $telephone) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding: 0;
+    }
+
   }
   
   &__divider {
@@ -229,6 +248,12 @@ body {
     padding: 1rem 3rem;
     display: flex;
     justify-content: flex-end;
+    border-radius: 0 0 0.5rem 0.5rem;
+    @media (max-width: $telephone) {
+      padding: 0.6rem 2rem;
+      
+    }
+
   }
 
   &__image {
@@ -252,7 +277,7 @@ body {
     background-color: $white;
     @include borderProjectsCard;
     margin: 1.4rem 0 1.4rem 0;
-    border-radius: 0.5rem 0.5rem 0 0;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
     width: 48%;
     display: flex;
     flex-direction: column;
@@ -322,7 +347,7 @@ body {
   padding: 8rem;
 
   @media (max-width: $telephone) {
-    padding: 1rem;
+    padding: 4rem 1rem;
     width: 100%;
   }
 
