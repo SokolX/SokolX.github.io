@@ -487,13 +487,11 @@ body {
   .projects__description {
     font-size: 1.1rem;
     line-height: 2rem;
-    padding: 1rem 0 4rem 0;
     color: #52606D; }
     @media (max-width: 640px) {
       .projects__description {
         font-size: 1rem;
-        line-height: 1.5rem;
-        padding: 0; } }
+        line-height: 1.5rem; } }
   .projects__divider {
     border-left: 1px solid #CBD2D9;
     border-right: 1px solid #CBD2D9;
