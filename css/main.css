@@ -654,13 +654,25 @@ body {
           width: 3.5rem;
           height: 0.2rem;
           background-color: #653CAD; } }
+    .skills-content__image {
+      position: relative;
+      top: 0.2rem;
+      width: 1.2rem;
+      height: 1.2rem; }
+      @media (max-width: 640px) {
+        .skills-content__image {
+          top: 0.1rem;
+          width: 0.8rem;
+          height: 0.8rem; } }
     .skills-content__item {
       width: 50%;
-      font-size: 1.1rem; }
+      font-size: 1.1rem;
+      line-height: 2.5rem; }
       @media (max-width: 640px) {
         .skills-content__item {
           width: 100%;
-          font-size: 0.9rem; } }
+          font-size: 0.9rem;
+          line-height: 2.2rem; } }
     .skills-content__list {
       list-style: none;
       padding: 0;
