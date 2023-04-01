@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  const apiRoot = 'https://tasks.5m3r3k.repl.co/v1/tasks/';
+  const apiRoot = 'https://tasks.5m3r3k.repl.co/v1/tasks';
   const trelloApiRoot = 'https://tasks.5m3r3k.repl.co/v1/trello';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
@@ -12,7 +12,7 @@ $(document).ready(function() {
   getAllTasks();
 
   function getAllAvailableBoards(callback, callbackArgs) {
-    var requestUrl = trelloApiRoot + 'boards';
+    var requestUrl = trelloApiRoot + '/boards';
 
     $.ajax({
       url: requestUrl,
@@ -111,7 +111,7 @@ $(document).ready(function() {
     var requestUrl = apiRoot;
 
     $.ajax({
-      url: requestUrl + taskId,
+      url: requestUrl + '/' + taskId,
       method: 'DELETE',
       success: function() {
         parentEl.slideUp(400, function() { parentEl.remove(); });
@@ -166,7 +166,7 @@ $(document).ready(function() {
   }
 
   function handleCardCreationRequest(event) {
-    var requestUrl = trelloApiRoot + 'cards';
+    var requestUrl = trelloApiRoot + '/cards';
     var $relatedTaskRow = $(event.target).parents('[data-task-id]');
     var relatedTaskId = $relatedTaskRow.attr('data-task-id');
     var relatedTask = availableTasks[relatedTaskId];
